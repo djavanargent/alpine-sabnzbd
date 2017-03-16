@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+exec \
+	s6-setuidgid media /app/sabnzbd/SABnzbd.py \
+	-b 0 -f /config -s 0.0.0.0:8080
+

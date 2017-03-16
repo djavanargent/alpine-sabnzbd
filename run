@@ -1,0 +1,9 @@
+docker run -d --name=sabnzbd \
+-v /docker/config/sabnzbd:/config \
+-v /docker/downloads/complete:/downloads \
+-v /docker/downloads/incomplete:/incomplete-downloads \
+-v /etc/localtime:/etc/localtime:ro \
+-e PGID=1001 -e PUID=1001 \
+-e TZ=US/Eastern \
+-p 8080:8080 -p 9090:9090 \
+djavanargent/alpine-sabnzbd
